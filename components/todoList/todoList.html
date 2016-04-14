@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="#todo of todos">
+    <span [style.textDecoration]="todo.done ? 'line-through' : 'none'">{{todo.task}}</span>
+    <input type="checkbox" [(ngModel)]="todo.done">
+  </li>
+</ul>
