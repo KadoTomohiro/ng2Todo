@@ -12,15 +12,15 @@ export class AddTodo {
     newTask: string = '';
 
     submitTodo(): void {
-        if (!this.newTask) {
-            this.emptyTask.emit();
-        } else {
-            let newTodo: Todo = {
+        if (this.newTask) {
+            let newTodo:Todo = {
                 task: this.newTask,
                 done: false
             };
             this.addTodo.emit(newTodo);
             this.newTask = '';
+        } else {
+            this.emptyTask.emit(null);
         }
     };
 }
