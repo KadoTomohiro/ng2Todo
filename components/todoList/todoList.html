@@ -1,6 +1,7 @@
 <ul>
   <li *ngFor="#todo of todos">
-    <span [style.textDecoration]="todo.done ? 'line-through' : 'none'">{{todo.task}}</span>
     <input type="checkbox" [(ngModel)]="todo.done">
+    <span [style.textDecoration]="todo.done ? 'line-through' : 'none'">{{todo.task}}</span>
+    <span *ngIf="todo.limit"><time>{{todo.limit}}</time>まで</span>
   </li>
 </ul>

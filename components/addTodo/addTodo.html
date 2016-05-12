@@ -1,4 +1,7 @@
 <form (submit)="submitTodo()">
-  <input type="text" [(ngModel)]="newTask" placeholder="new task">
+  <label for="task">Task:</label>
+  <input type="text" id="task" [(ngModel)]="newTask" placeholder="new task">
+  <label for="limit">Limit:</label>
+  <input type="date" id="limit" [(ngModel)]="limit">
   <button type="submit">Add</button>
 </form>
